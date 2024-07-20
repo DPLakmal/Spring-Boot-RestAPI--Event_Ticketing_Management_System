@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    image: spring-boot-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springboot_app
+    environment:
+      SPRING_APPLICATION_NAME: ems
+      SPRING_DATASOURCE_URL: jdbc:mysql://sql3.freemysqlhosting.net:3306/sql3721089
+      SPRING_DATASOURCE_USERNAME: sql3721089
+      SPRING_DATASOURCE_PASSWORD: bPtGGhu8iF
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT: org.hibernate.dialect.MySQL8Dialect
+      SPRING_JPA_PROPERTIES_HIBERNATE_FORMAT_SQL: "true"
+      LOGGING_LEVEL_ORG_HIBERNATE_SQL: DEBUG
+      LOGGING_LEVEL_ORG_HIBERNATE_TYPE_DESCRIPTOR_SQL_BASICBINDER: TRACE
+    ports:
+      - "8080:8080"
+
+networks:
+  default:
+    name: springboot-mysql-network

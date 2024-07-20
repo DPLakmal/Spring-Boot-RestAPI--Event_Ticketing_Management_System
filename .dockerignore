@@ -1,0 +1,26 @@
+# Ignore Maven or Gradle build directories
+
+build/
+
+# Ignore IDE configuration files
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignore local development files
+*.log
+*.tmp
+
+# Ignore system files
+.DS_Store
+*.swp
+
+# Ignore Dockerfile and .dockerignore itself
+Dockerfile
+.dockerignore
+
+# Ignore version control directories
+.git/
+.gitignore
+
