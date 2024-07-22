@@ -1,4 +1,4 @@
-package com.ems.ems.entity;
+package com.ems.ems.entities;
 
 import java.time.LocalDateTime;
 import jakarta.persistence.Column;
@@ -80,4 +80,5 @@ public class Event {
     public void setAttendees(Integer attendees) {
         this.attendees = attendees;
     }
+
 }
